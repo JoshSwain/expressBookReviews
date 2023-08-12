@@ -201,16 +201,16 @@ app.get('/title/:title', (req, res) => {
     });
 });
 
-app.get('/title/:title',function (req, res) {
-  const bookTitle = req.params.title;
+// app.get('/title/:title',function (req, res) {
+//   const bookTitle = req.params.title;
 
-  const titledBook = Object.values(books).filter(book => book.title === bookTitle);
+//   const titledBook = Object.values(books).filter(book => book.title === bookTitle);
 
-  if (bookTitle.length === 0) {
-    res.status(404).send('Title not found');
-  } else {
-    res.json(titledBook)};
-});
+//   if (bookTitle.length === 0) {
+//     res.status(404).send('Title not found');
+//   } else {
+//     res.json(titledBook)};
+// });
 
 //  Get book review
 app.get('/review/:isbn',function (req, res) {
